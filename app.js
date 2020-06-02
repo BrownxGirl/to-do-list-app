@@ -21,9 +21,9 @@ for (i = 0; i < close.length; i++) {
 
 // Add a "checked" symbol when clicking on a list item
 var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'li') {
-    ev.target.classList.toggle('checked');
+list.addEventListener('click', function(event) {
+  if (event.target.tagName === 'LI') {
+    event.target.classList.toggle('checked');
   }
 }, false);
 
@@ -53,3 +53,24 @@ function newElement() {
     }
   }
 }
+
+  var today = new Date();
+ let at =today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+ function time(){
+   return at
+ }
+//adding date 
+var d = new Date();
+var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+document.getElementById("month").innerHTML = months[d.getMonth()]
+
+document.getElementById("date").innerHTML = d.getDate();
+
+document.getElementById("year").innerHTML = d.getFullYear();
+
+var days = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+document.getElementById("day").innerHTML = days[d.getDay() -1] 
+ console.log(d)
+//saving data into local storage
+var inputValue = document.getElementById("myInput");
+var btn = document.getElementsByClassName("addBtn")
